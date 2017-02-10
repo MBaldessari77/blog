@@ -3,4 +3,4 @@
 
 I'm a software developer from more than 20 years... my passion is write code :)
 
-See my posts written before 2017 on my [italian blog](http://blogs.ugidotnet.org/mb) 
+See my posts written before 2017 on my <a href="http://blogs.ugidotnet.org/mb" target="_blank">italian blog</a>
