@@ -1,5 +1,5 @@
 ---
-#layout: post
+layout: post
 title: "Continuos Integration & Static code analisys"
 date: 2017-02-10
 categories: best practices
