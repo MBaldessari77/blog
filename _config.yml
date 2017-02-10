@@ -1,5 +1,4 @@
 theme: jekyll-theme-hacker
 title: Marco Baldessari's blog
 description: Welcome to my english it blog (created in 2017)
-baseurl: "/blog/" # the subpath of your site, e.g. /blog/
-url: "https://waldrix.github.io/blog/" # the base hostname & protocol for your site
+permalink: /blog/:categories/:year/:month/:day/:title.html
