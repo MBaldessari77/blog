@@ -2,6 +2,7 @@
 layout: post
 title: "Continuos Integration & Static code analisys"
 date: 2017-02-10
+categories: best practices
 ---
 
 Relatively recent, my team started to look and introduce [Agile practices](https://en.wikipedia.org/wiki/Category:Agile_software_development), with the objective to improve software quality and stability.
