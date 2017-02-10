@@ -1,4 +1,4 @@
 theme: jekyll-theme-hacker
 title: Marco Baldessari's blog
 description: Welcome to my english it blog (created in 2017)
-permalink: /blog/:categories/:year/:month/:day/:title.html
+permalink: /blog/
