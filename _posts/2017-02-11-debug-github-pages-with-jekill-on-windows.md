@@ -1,6 +1,6 @@
 ---
 title: "Debug Github Pages with Jekill on Windows"
-layout: post
+layout: default
 date: 2017-02-11
 categories: debug
 ---
