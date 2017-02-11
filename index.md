@@ -1,5 +1,4 @@
 ---
-layout: default
 ---
 
 I'm a software developer from more than 20 years... my passion? **write code :)**
