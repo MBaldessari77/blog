@@ -27,7 +27,7 @@ I found intresting the [CII Best Practices Badge Program](https://bestpractices.
 
 3. Personalize task in Gruntfile.js located in the Web Site folder project
 
-    ~~~javascript
+    ~~~ javascript
         ...
         // jshint
         jshint: {
