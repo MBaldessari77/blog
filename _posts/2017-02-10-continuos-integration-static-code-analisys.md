@@ -7,9 +7,9 @@ categories: best practices
 
 Relatively recent my team started to look and introduce [Agile practices](https://en.wikipedia.org/wiki/Category:Agile_software_development) with the objective to improve software quality and stability.
 
-We choosed [Continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) as first practice, to continuos build and test code commited (with git in the development branch in our case).
+We choosed [Continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) as first practice, to continuos build and test code commited.
 
-Looking ahead in most known open source projects my intresting falling into this badge <img src="https://bestpractices.coreinfrastructure.org/projects/29/badge"> on [Node.js](https://github.com/nodejs/node) open source project site.
+Looking ahead in most known open source projects my intresting falling into this badge <img src="https://bestpractices.coreinfrastructure.org/projects/29/badge"> on [Node.js](https://github.com/nodejs/node) project site.
 
 I found intresting the [CII Best Practices Badge Program](https://bestpractices.coreinfrastructure.org/) then I suggest and introduced [Static code analisys](https://github.com/linuxfoundation/cii-best-practices-badge/blob/master/doc/criteria.md#analysis) criteria in our web projects and integrated in the C.I. process.
 
@@ -47,7 +47,7 @@ jshint: {
 ...
 ```
 
-*   Include Static code analisys step on C.I. for the project
+*   Include Static code analisys step in C.I.
 
 ```
 grunt jshint
@@ -55,4 +55,4 @@ grunt jshint
 
 ## Conclusion
 
-With a simple practice, and with an initial minimal friction, whe increase the stability of our client code and reduce impact with release build and deply process. This allowed us to **save much time later**, for example, searching reasons for crash in the [minification step](https://en.wikipedia.org/wiki/Minification_(programming))!
+With a simple practice, and with an initial minimal friction, whe increase the stability of our client code and reduce impact with release build and deploy process. This allowed us to **save much time later**, for example, searching reasons for crash in the [minification step](https://en.wikipedia.org/wiki/Minification_(programming))!
