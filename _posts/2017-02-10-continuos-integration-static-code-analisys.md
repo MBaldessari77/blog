@@ -22,6 +22,7 @@ We chose [JSHint](http://jshint.com/about/) as Static Code Analysis Tool (see al
 npm install -g jshint
 ```
 3. Personalize task in Gruntfile.js located in the Web Site folder project
+
 ```javascript
 ...
 // jshint
@@ -41,6 +42,7 @@ jshint: {
 }
 ...
 ```
+
 4. Include Static code analisys step on C.I. for the project
 ```
 grunt jshint
