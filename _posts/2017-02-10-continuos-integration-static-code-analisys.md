@@ -9,7 +9,7 @@ Relatively recent, my team started to look and introduce [Agile practices](https
 
 We introduce [Continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) as first pratctice, to Continuos build and test code commited (with git in the development branch in our case).
 
-Looking ahead in most known open source projects my intresting falling into this badge <img src="https://bestpractices.coreinfrastructure.org/projects/29/badge"></img> on [Node.js](https://github.com/nodejs/node) open source project site.
+Looking ahead in most known open source projects my intresting falling into this badge <img src="https://bestpractices.coreinfrastructure.org/projects/29/badge"> on [Node.js](https://github.com/nodejs/node) open source project site.
 
 I found intresting the [CII Best Practices Badge Program](https://bestpractices.coreinfrastructure.org/) then I suggest and introduced [Static code analisys](https://github.com/linuxfoundation/cii-best-practices-badge/blob/master/doc/criteria.md#analysis) criteria in our web projects and integrated in the C.I. process.
 
