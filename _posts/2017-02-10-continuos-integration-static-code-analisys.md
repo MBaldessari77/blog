@@ -15,39 +15,39 @@ I found intresting the [CII Best Practices Badge Program](https://bestpractices.
 
 ## Practically
 
-### Choose the tool
+* Choose the tool
 
-We chose [JSHint](http://jshint.com/about/) as Static Code Analysis Tool (see also [List of tools for static code analysis](https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis))
+  We chose [JSHint](http://jshint.com/about/) as Static Code Analysis Tool (see also [List of tools for static code analysis](https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis))
   
-### Install jshint with npm follow [Download and install] instructions (http://jshint.com/install/)
+* Install jshint with npm follow [Download and install] instructions (http://jshint.com/install/)
 
-### Personalize jshint task in Gruntfile.js located in the Web Site folder project (optional)
+* Personalize jshint task in Gruntfile.js located in the Web Site folder project (optional)
 
-```javascript
-...
-// jshint
-jshint: {
-  all: ['app/**/*.js'], //Analize all file under app folder
-  options: {
-    reporter: require('jshint-stylish'),
-    strict: true, //Force strict (see http://jshint.com/docs/options/#strict)
-    asi: true, //Disable ; check (see http://jshint.com/docs/options/#asi)
-    eqeqeq: true, //Enforce === o !== use (see http://jshint.com/docs/options/#eqeqeq)
-    eqnull: true, //Disable == null control (see http://jshint.com/docs/options/#eqnull)
-    browser: true, //Defines globals exposed by modern browsers  (vedi http://jshint.com/docs/options/#browser)
-    globals: {
-      jQuery: true //Include jQuery definitions (vedi http://jshint.com/docs/options/#jquery)
+  ```javascript
+  ...
+  // jshint
+  jshint: {
+    all: ['app/**/*.js'], //Analize all file under app folder
+    options: {
+      reporter: require('jshint-stylish'),
+      strict: true, //Force strict (see http://jshint.com/docs/options/#strict)
+      asi: true, //Disable ; check (see http://jshint.com/docs/options/#asi)
+      eqeqeq: true, //Enforce === o !== use (see http://jshint.com/docs/options/#eqeqeq)
+      eqnull: true, //Disable == null control (see http://jshint.com/docs/options/#eqnull)
+      browser: true, //Defines globals exposed by modern browsers  (vedi http://jshint.com/docs/options/#browser)
+      globals: {
+        jQuery: true //Include jQuery definitions (vedi http://jshint.com/docs/options/#jquery)
+      }
     }
   }
-}
-...
-```
+  ...
+  ```
 
-### Include Static code analisys step on C.I. for the project
+* Include Static code analisys step on C.I. for the project
 
-```
-grunt jshint
-```
+  ```
+  grunt jshint
+  ```
 
 ## Conclusion
 
