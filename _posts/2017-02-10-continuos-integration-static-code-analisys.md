@@ -55,4 +55,4 @@ grunt jshint
 
 ## Conclusion
 
-With a simple practice, and with an initial minimal friction, whe increase the stability of our client code and reduce impact with release build and deply process. This allowed us to **save much time later**, for example, with found reasons for crash in the [minification step](https://en.wikipedia.org/wiki/Minification_(programming))!
+With a simple practice, and with an initial minimal friction, whe increase the stability of our client code and reduce impact with release build and deply process. This allowed us to **save much time later**, for example, searching reasons for crash in the [minification step](https://en.wikipedia.org/wiki/Minification_(programming))!
