@@ -27,7 +27,7 @@ I found intresting the [CII Best Practices Badge Program](https://bestpractices.
 
 3. Personalize task in Gruntfile.js located in the Web Site folder project
 
-    ```javascript
+    ~~~javascript
         ...
         // jshint
         jshint: {
@@ -45,7 +45,7 @@ I found intresting the [CII Best Practices Badge Program](https://bestpractices.
           }
         }
         ...
-    ```
+    ~~~
 
 4. Include Static code analisys step on C.I. for the project
 
@@ -55,4 +55,4 @@ I found intresting the [CII Best Practices Badge Program](https://bestpractices.
 
 ## Conclusion
 
-With a simple practice, and with an initial minimal friction, whe increase the stability of our client code and reduce impact with release build and deply process. This allowed us to **save much time later**, for example, with found reasons for crash in the [minification set](https://en.wikipedia.org/wiki/Minification_(programming))!
+With a simple practice, and with an initial minimal friction, whe increase the stability of our client code and reduce impact with release build and deply process. This allowed us to **save much time later**, for example, with found reasons for crash in the [minification step](https://en.wikipedia.org/wiki/Minification_(programming))!
