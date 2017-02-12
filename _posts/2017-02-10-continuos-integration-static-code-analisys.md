@@ -5,9 +5,9 @@ date: 2017-02-10
 categories: best practices
 ---
 
-Relatively recent, my team started to look and introduce [Agile practices](https://en.wikipedia.org/wiki/Category:Agile_software_development), with the objective to improve software quality and stability.
+Relatively recent my team started to look and introduce [Agile practices](https://en.wikipedia.org/wiki/Category:Agile_software_development) with the objective to improve software quality and stability.
 
-We introduce [Continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) as first pratctice, to Continuos build and test code commited (with git in the development branch in our case).
+We choosed [Continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) as first practice, to continuos build and test code commited (with git in the development branch in our case).
 
 Looking ahead in most known open source projects my intresting falling into this badge <img src="https://bestpractices.coreinfrastructure.org/projects/29/badge"> on [Node.js](https://github.com/nodejs/node) open source project site.
 
