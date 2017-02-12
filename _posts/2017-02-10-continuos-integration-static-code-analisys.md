@@ -21,9 +21,9 @@ I found intresting the [CII Best Practices Badge Program](https://bestpractices.
   
 2. Install jshint with npm follow [Download and install] instructions (http://jshint.com/install/)
 
-    ```
-    npm install -g jshint
-    ```
+        ```
+        npm install -g jshint
+        ```
 
 3. Personalize task in Gruntfile.js located in the Web Site folder project
 
@@ -49,9 +49,9 @@ I found intresting the [CII Best Practices Badge Program](https://bestpractices.
 
 4. Include Static code analisys step on C.I. for the project
 
-    ```
-    grunt jshint
-    ```
+        ```
+        grunt jshint
+        ```
 
 ## Conclusion
 
