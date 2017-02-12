@@ -27,25 +27,25 @@ I found intresting the [CII Best Practices Badge Program](https://bestpractices.
 
   Edit Gruntfile.js located in the Web Site folder project
 
-  ```javascript
-  ...
-  // jshint
-  jshint: {
-    all: ['app/**/*.js'], //Analize all file under app folder
-    options: {
-      reporter: require('jshint-stylish'),
-      strict: true, //Force strict (see http://jshint.com/docs/options/#strict)
-      asi: true, //Disable ; check (see http://jshint.com/docs/options/#asi)
-      eqeqeq: true, //Enforce === o !== use (see http://jshint.com/docs/options/#eqeqeq)
-      eqnull: true, //Disable == null control (see http://jshint.com/docs/options/#eqnull)
-      browser: true, //Defines globals exposed by modern browsers  (vedi http://jshint.com/docs/options/#browser)
-      globals: {
-        jQuery: true //Include jQuery definitions (vedi http://jshint.com/docs/options/#jquery)
-      }
+```javascript
+...
+// jshint
+jshint: {
+  all: ['app/**/*.js'], //Analize all file under app folder
+  options: {
+    reporter: require('jshint-stylish'),
+    strict: true, //Force strict (see http://jshint.com/docs/options/#strict)
+    asi: true, //Disable ; check (see http://jshint.com/docs/options/#asi)
+    eqeqeq: true, //Enforce === o !== use (see http://jshint.com/docs/options/#eqeqeq)
+    eqnull: true, //Disable == null control (see http://jshint.com/docs/options/#eqnull)
+    browser: true, //Defines globals exposed by modern browsers  (vedi http://jshint.com/docs/options/#browser)
+    globals: {
+      jQuery: true //Include jQuery definitions (vedi http://jshint.com/docs/options/#jquery)
     }
   }
-  ...
-  ```
+}
+...
+```
 
 *   Include Static code analisys step on C.I. for the project
 
