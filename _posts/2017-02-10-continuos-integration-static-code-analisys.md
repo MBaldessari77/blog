@@ -17,15 +17,15 @@ I found intresting the [CII Best Practices Badge Program](https://bestpractices.
 
 *   Choose the tool
 
-  We chose [JSHint](http://jshint.com/about/) as Static Code Analysis Tool (see also [List of tools for static code analysis](https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis))
+We chose [JSHint](http://jshint.com/about/) as Static Code Analysis Tool (see also [List of tools for static code analysis](https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis))
   
 *   Install jshint with npm
 
-  Follow [Download and install] instructions (http://jshint.com/install/)
+Follow [Download and install](http://jshint.com/install/) instructions
 
 *   Personalize jshint task (optional)
 
-  Edit Gruntfile.js located in the Web Site folder project
+Edit Gruntfile.js located in the Web Site folder project
 
 ```javascript
 ...
@@ -49,9 +49,9 @@ jshint: {
 
 *   Include Static code analisys step on C.I. for the project
 
-  ```
-  grunt jshint
-  ```
+```
+grunt jshint
+```
 
 ## Conclusion
 
