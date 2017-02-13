@@ -35,4 +35,7 @@ gem install jekyll
 ```
 
 *   Install Jekyll using Bundler
+
+Checkout and go in master branch of site (if github pages is mapped on master)
+
 *   To be continued and reviewed
