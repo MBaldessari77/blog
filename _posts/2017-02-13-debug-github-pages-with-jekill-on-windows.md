@@ -1,7 +1,7 @@
 ---
 title: "Debug Github Pages with Jekill on Windows (work in progress)"
 layout: default
-date: 2017-02-11
+date: 2017-02-13
 categories: debug
 ---
 
