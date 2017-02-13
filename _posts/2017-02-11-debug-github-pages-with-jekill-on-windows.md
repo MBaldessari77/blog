@@ -34,4 +34,5 @@ gem install jekyll
     ...
 ```
 
-* To be continued and reviewed
+*   Install Jekyll using Bundler
+*   To be continued and reviewed
