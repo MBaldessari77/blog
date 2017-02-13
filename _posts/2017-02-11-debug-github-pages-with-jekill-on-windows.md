@@ -12,7 +12,7 @@ categories: debug
 *   Install Jekill via chocolatey (see https://chocolatey.org/)
 
 ```
-npm install -g jshint
+choco install ruby -y
 ```
 
 *   Reopen cmd
