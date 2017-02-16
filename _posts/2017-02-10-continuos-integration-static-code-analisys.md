@@ -9,7 +9,7 @@ Relatively recent my team started to look and introduce [Agile practices](https:
 
 We choose [Continuous integration](https://en.wikipedia.org/wiki/Continuous_integration)n as first practice, to continuous build and test code committed.
 
-Looking ahead in most known open source projects my interesting falling into this badge <img src="https://bestpractices.coreinfrastructure.org/projects/29/badge"> on [Node.js](https://github.com/nodejs/node) project site.
+Looking ahead in most known open source projects my interesting falling into this badge <a href="https://bestpractices.coreinfrastructure.org/"> <img src="https://bestpractices.coreinfrastructure.org/projects/1/badge"></a> on [Node.js](https://github.com/nodejs/node) project site.
 
 I found interesting the [CII Best Practices Badge Program](https://bestpractices.coreinfrastructure.org/) then I suggest and introduced [Static code analisys](https://github.com/linuxfoundation/cii-best-practices-badge/blob/master/doc/criteria.md#analysis) criteria in our web projects and integrated in the C.I. process.
 
@@ -28,7 +28,6 @@ Follow [Download and install](http://jshint.com/install/) instructions
 Edit Gruntfile.js located in the Web Site folder project
 
 ```javascript
-// jshint
 {
 ...
 jshint: {
