@@ -1,4 +1,4 @@
-theme: jekyll-theme-cayman
+theme: jekyll-theme-minimal
 title: Marco Baldessari's blog
 description: Welcome to my english blog (created in 2017)
 permalink: /blog/:categories/:year/:month/:day/:title.html
