@@ -28,8 +28,9 @@ Follow [Download and install](http://jshint.com/install/) instructions
 Edit Gruntfile.js located in the Web Site folder project
 
 ```javascript
-...
 // jshint
+{
+...
 jshint: {
   all: ['app/**/*.js'], //Analize all file under app folder
   options: {
@@ -43,8 +44,8 @@ jshint: {
       jQuery: true //Include jQuery definitions (vedi http://jshint.com/docs/options/#jquery)
     }
   }
-}
 ...
+}
 ```
 
 *   Include Static code analisys step in C.I.
