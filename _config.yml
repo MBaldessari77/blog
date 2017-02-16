@@ -1,4 +1,4 @@
-theme: jekyll-theme-hacker
+theme: jekyll-theme-modernist
 title: Marco Baldessari's blog
 description: Welcome to my english blog (created in 2017)
 permalink: /blog/:categories/:year/:month/:day/:title.html
