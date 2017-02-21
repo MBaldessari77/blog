@@ -68,7 +68,7 @@ PS D:\Sviluppo\blog>
 source 'http://rubygems.org'
 ```
 
-Then rerun "bundle install"
+* Rerun "bundle install"
 
 ```
 bundle install
