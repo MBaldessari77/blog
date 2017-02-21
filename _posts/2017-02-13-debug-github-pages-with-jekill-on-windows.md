@@ -34,7 +34,7 @@ gem install jekyll
     ...
 ```
 *   Continue with step Requirements(https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/#requirements)
-*   Checkout the master branch of site (if github pages is mapped on master) and go in the checkout folder
+*   Checkout the master branch of site (if github pages is mapped on master) and go in the local checkout folder
 *   Continue to step [Install Jekyll using Bundler](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/#step-2-install-jekyll-using-bundler)
 
 ```
@@ -62,7 +62,7 @@ Make sure that `gem install i18n -v '0.8.0'` succeeds before bundling.
 PS D:\Sviluppo\blog>
 ```
 
-* To skip last error, modify temporarily Gemfile and change protocol source to http
+*   To skip last error, modify temporarily Gemfile and change protocol source to http
 
 ```
 source 'http://rubygems.org'
@@ -112,6 +112,6 @@ An error occurred while installing json (1.8.6), and Bundler cannot continue.
 Make sure that `gem install json -v '1.8.6'` succeeds before bundling.
 ```
 
-* We need to install last ruby [Development-Kit installer](http://rubyinstaller.org/downloads/archives) for Windows
+*   We need to install last ruby [Development-Kit installer](http://rubyinstaller.org/downloads/archives) for Windows
 
 *   To be continued and reviewed
