@@ -113,5 +113,7 @@ Make sure that `gem install json -v '1.8.6'` succeeds before bundling.
 ```
 
 *   We need to install last ruby [Development-Kit installer](http://rubyinstaller.org/downloads/archives) for Windows
+  *   Download ad install latest RubyInstallers
+  *   Download ad install latest Devkit (NOTE: exitrDevKit-tdm-\*-sfx.exe is an auto extraible archive...)
 
 *   To be continued and reviewed
