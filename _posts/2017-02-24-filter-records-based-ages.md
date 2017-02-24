@@ -5,7 +5,7 @@ date: 2017-02-24
 categories: t-sql tips
 ---
 
-Some example to delete log table row based on theirs age:
+Some example to delete log table row based on theirs age
 
 ```sql
 DELETE FROM Logs WHERE Logged<DATEADD(mm,-1,GETDATE()) --Delete records older than one month
