@@ -13,7 +13,7 @@ categories: debug
 choco install ruby -y
 ```
 
-* Follow [How to install github](http://jekyllrb.com/docs/windows/#how-to-install-github-pages)
+* Follow [How to install github-pages](http://jekyllrb.com/docs/windows/#how-to-install-github-pages)
   * Skip *choco install ruby -version 2.2.4* step and change *- C:/tools/ruby22* in - *C:/tools/rubyXX* based on Ruby version installed
 
 * To be continued and reviewed
