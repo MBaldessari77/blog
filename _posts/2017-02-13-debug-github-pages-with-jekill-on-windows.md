@@ -5,6 +5,8 @@ date: 2017-02-13
 categories: debug
 ---
 
+## How to debug jekyll site blog in Windows
+
 * Starting by search in GitHub Help found this page: [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/#platform-windows)
 * Then go to [Jekil installation instruction](http://jekyllrb.com/docs/windows/#installation) for Windows
 * Install Jekill via chocolatey (see https://chocolatey.org/)
