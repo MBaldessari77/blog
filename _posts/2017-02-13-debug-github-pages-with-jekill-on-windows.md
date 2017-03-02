@@ -20,8 +20,8 @@ choco install ruby -y
 * Follow Step 2: (Install Jekyll using Bundler)[https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/#step-2-install-jekyll-using-bundler]
 * First update bundle [Keeping your site up to date with the GitHub Pages](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/#keeping-your-site-up-to-date-with-the-github-pages-gem)
 * Then to build and serve site: [Step 4: Build your local Jekyll site](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/#step-4-build-your-local-jekyll-site)
-* Browse http://localhost:4000/blog/
-* Some problems with stile and site view (to review)
+* Browse [http://localhost:4000/blog/](http://localhost:4000/blog/)
+  * Add in [Front Matter](https://jekyllrb.com/docs/frontmatter/) of index and posts md _layout: default_
 * Create or update .gitignore file exclude following items:
 
 ```
@@ -31,3 +31,4 @@ _site/
 ```
 
 * Commit and push changes
+* Enjoy debug locally generated jekyll blog!
