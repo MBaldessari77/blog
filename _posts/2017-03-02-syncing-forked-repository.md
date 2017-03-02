@@ -1,9 +1,11 @@
 ---
-title: "Syncing forked repository"
+title: "Syncing forked repository with git"
 layout: default
 date: 2017-03-02
 categories: git tips
 ---
+
+## Pratically
 
 1. Configuring a remote for a fork (example applied to my actual source jekyll theme)
 ```powershell
