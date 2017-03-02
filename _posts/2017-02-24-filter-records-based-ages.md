@@ -1,6 +1,6 @@
 ---
 title: "Filter records based on theirs age with T-SQL"
-layout: default
+layout: post
 date: 2017-02-24
 categories: t-sql tips
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Syncing forked repository with git"
-layout: default
+layout: post
 date: 2017-03-02
 categories: git tips
 ---
