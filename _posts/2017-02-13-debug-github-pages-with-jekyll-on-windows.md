@@ -1,5 +1,5 @@
 ---
-title: "Debug Github Pages with Jekill on Windows (work in progress)"
+title: "Debug Github Pages with Jekyll on Windows"
 layout: post
 date: 2017-02-13
 categories: debug
