@@ -15,3 +15,4 @@ The contract in software define how two systems interact, exchange information a
 
 When a class implements IDisposable is tell _"Hey... when you use me you have to call Dispose explicitily at the end!"_
 
+Seel also http://stackoverflow.com/questions/5895879/when-do-we-need-to-call-dispose-in-dot-net-c
