@@ -11,5 +11,7 @@ We can discquisire about correctness, clarity and onesty of a contract, but a co
 
 The contract in software define how two systems interact, exchange information and/or provide service among them.
 
-## Praticallly
+## Rule of thumb
+
+When a class implements IDisposable is tell _"Hey... when you use me you have to call Dispose explicitily at the end!"_
 
