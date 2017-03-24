@@ -1,7 +1,7 @@
 ---
 title: "A contrat IS a contract"
 layout: post
-date: 2017-03-14
+date: 2017-03-24
 categories: architecture programming c#
 ---
 
