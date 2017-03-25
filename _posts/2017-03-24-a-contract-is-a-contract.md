@@ -1,5 +1,5 @@
 ---
-title: "A contrat IS a contract"
+title: "A contrat IS a contract (e.g. IDisposable)"
 layout: post
 date: 2017-03-24
 categories: architecture programming c#
