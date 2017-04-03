@@ -10,5 +10,8 @@ In the last period, I start to interesting in [Application virtualization] also 
 ## Path
 As application developer and architect my interesting falling into [Docker], a relatively recent project (March 2013), which has become increasingly more popular in the developer community.
 
+Docker is not an Application Virtualization platform but is a container that "automates the deployment of applications inside software containers", this container contains code, runtime, system tools, system libraries – anything you can install on a server (see also [Docker Wiki]).
+
 [Application virtualization]: https://en.wikipedia.org/wiki/Application_virtualization
 [Docker]: https://github.com/docker/docker
+[Docker Wiki]: https://en.wikipedia.org/wiki/Docker_(software)
