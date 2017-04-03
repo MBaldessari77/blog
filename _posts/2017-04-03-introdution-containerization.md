@@ -1,5 +1,5 @@
 ---
-title: "Introdution to Containerization"
+title: "Introdution to Container based virtualization and Docker"
 layout: post
 date: 2017-03-30
 categories: architecture so
@@ -10,12 +10,12 @@ In the last period, I start to interesting in [Application virtualization] also 
 ## Path
 
 * As application developer and architect my interesting falling into [Docker], a "relatively" recent project (initial release on March 2013), which has become increasingly more popular in the developer community.
-* Docker is not a virtualization layer but is a container that "automates the deployment of applications inside software containers", this container contains code, runtime, system tools, system libraries – anything you can install on a server (see also [Docker Wiki]).
-* This is an intresting Azure blog post wich introduce the argument [Containers: Docker, Windows and Trends], and demostrate the intresting from Microsoftand the full support of this technolgy and with [Azure Container Service].
+* Docker is not a virtualization layer but is a container that "automates the deployment of applications inside software containers", the Dock container contains code, runtime, system tools, system libraries – anything you can install on a server (see also [Docker Wiki]).
+* This is an interesting Azure blog post wich introduce the argument [Containers: Docker, Windows and Trends], and represent Microsoft interesting and full support of this technology with [Azure Container Service].
 
 ## Pratically
 
-Is a great idea starting from this tutorial to become confidential with _Docker way to Container based virtualization_: [Get started with Docker]
+Is a great idea starting from this tutorial to become confidential with _Docker way to Container based virtualization_: [Get started with Docker].
 
 [Application virtualization]: https://en.wikipedia.org/wiki/Application_virtualization
 [Docker]: https://github.com/docker/docker
