@@ -1,0 +1,11 @@
+---
+title: "Safer AES 256 cryptography"
+layout: post
+date: 2017-10-02
+categories: tip security code-snippet net c#
+---
+
+Increasing security and privacy requirements is important to preserve confidential data. For a developer work in specific ambit, can be normal to store and inderictly query confidential or sensible information stored on Database. A simple solution is to decript/encript sensible data during run-time, chose a strong encription alghoritm and password could not be sufficient in some or most cases. To simply increase confidential security is to generate and use a different pseudo-caus IV (Initialization Vector) before encripting and include it in the encripted content. The side effect is an increasing data size required but this is a better security for store confidential data specifically if the field assume only few types of values.
+
+# Code-snippe
+
