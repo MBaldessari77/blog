@@ -5,28 +5,30 @@ date: 2017-10-02
 categories: tip security code-snippet net c#
 ---
 
-Increasing security and privacy requirements is important to preserve confidential data. For a developer can be normal to store and somewhat query confidential or sensible information from Database. A simple solution is to decript/encript sensible data not chose only a strong encription alghoritm and password but also generate and use a different pseudo-causual IV (Initialization Vector) before encripting and include it in the encripted output. The side effect of this choice is an increased CPU and datar occuped by encripted data but this choice is a better safe for store confidential data, specifically when data assume only few types of values (the correlation result much difficult or intractable).
+# Introduction
+
+Increasing security and privacy requirements is important to preserve confidential data. For a developer can be normal to store and somewhat query confidential or sensible information from Database. A simple solution is to decrypt/encrypt sensible data not chose only a strong encryption algorithm and password but also generate and use a different pseudo-casual IV (Initialization Vector) before encrypting and include it in the encrypted output. The side effect of this choice is an increased CPU and data occupied by encrypted data but this choice is a better safe for store confidential data, specifically when data assume only a few types of values (the correlation result much difficult or intractable).
 
 # Code-snippet
 
+## Class - Aes256Chiper
+
 ```csharp
-/// <summary>
-/// Chiper service helper on AES256 .NET chiper.
-/// </summary>
-/// <remarks>
-/// This class generate a random IV every encripting and serialize it in encrypted result strongly enforce encripted data and it's privacy.
-/// </remarks>
 /// <see ref="https://msdn.microsoft.com/en-US/library/system.security.cryptography.aescryptoserviceprovider(v=vs.90).aspx"/>
 /// <see ref="http://stackoverflow.com/questions/8041451/good-aes-initialization-vector-practice"/>
 public class Aes256Chiper
 {
 	const int KeyLength = 256 / 8;  //32 byte
 
-	public static string EncriptBase64(Guid key1, Guid key2, string input)
+	public string EncriptBase64(Guid key1, Guid key2, string input)
 	{
-		//Genera un differente IV per ogni chiamata che viene innestato nell'output
+		//Generate a different IV for each calls
 		using (var stream = new MemoryStream())
+#if NETCOREAPP1_1
+		using (var aes = Aes.Create())
+#else
 		using (var aes = new AesCryptoServiceProvider())
+#endif
 		{
 			byte[] iv = aes.IV;
 			stream.Write(BitConverter.GetBytes(iv.Length), 0, sizeof(int));
@@ -40,7 +42,7 @@ public class Aes256Chiper
 		}
 	}
 
-	public static string DecriptBase64(Guid key1, Guid key2, string input)
+	public string DecriptBase64(Guid key1, Guid key2, string input)
 	{
 		byte[] buffer = Convert.FromBase64String(input);
 		using (var stream = new MemoryStream(buffer))
@@ -71,27 +73,26 @@ public class Aes256Chiper
 		byte[] encrypted;
 		// Create an AesCryptoServiceProvider object
 		// with the specified key and IV.
-		using (var aesAlg = new AesCryptoServiceProvider())
+#if NETCOREAPP1_1
+		using (var aes = Aes.Create())
+#else
+		using (var aes = new AesCryptoServiceProvider())
+#endif
 		{
-			aesAlg.Key = key;
-			aesAlg.IV = iv;
+			aes.Key = key;
+			aes.IV = iv;
 
 			// Create a decrytor to perform the stream transform.
-			ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+			ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
 
 			// Create the streams used for encryption.
 			using (var msEncrypt = new MemoryStream())
+			using (var csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
 			{
-				using (var csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
-				{
-					using (var swEncrypt = new StreamWriter(csEncrypt))
-					{
-
-						//Write all data to the stream.
-						swEncrypt.Write(plainText);
-					}
-					encrypted = msEncrypt.ToArray();
-				}
+				using (var swEncrypt = new StreamWriter(csEncrypt))
+					//Write all data to the stream.
+					swEncrypt.Write(plainText);
+				encrypted = msEncrypt.ToArray();
 			}
 		}
 
@@ -115,32 +116,70 @@ public class Aes256Chiper
 
 		// Create an AesCryptoServiceProvider object
 		// with the specified key and IV.
-		using (var aesAlg = new AesCryptoServiceProvider())
+#if NETCOREAPP1_1
+		using (var aes = Aes.Create())
+#else
+		using (var aes = new AesCryptoServiceProvider())
+#endif
 		{
-			aesAlg.Key = key;
-			aesAlg.IV = iv;
+			aes.Key = key;
+			aes.IV = iv;
 
 			// Create a decrytor to perform the stream transform.
-			ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
+			ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
 
 			// Create the streams used for decryption.
 			using (var msDecrypt = new MemoryStream(cipherText))
-			{
-				using (var csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
-				{
-					using (var srDecrypt = new StreamReader(csDecrypt))
-					{
-
-						// Read the decrypted bytes from the decrypting stream
-						// and place them in a string.
-						plaintext = srDecrypt.ReadToEnd();
-					}
-				}
-			}
-
+			using (var csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+			using (var srDecrypt = new StreamReader(csDecrypt))
+				// Read the decrypted bytes from the decrypting stream
+				// and place them in a string.
+				plaintext = srDecrypt.ReadToEnd();
 		}
 
 		return plaintext;
 	}
 }
 ```
+
+## Test - Aes256Chiper
+
+```csharp
+[Test]
+public void EveryCryptographicResultsIsDifferentEvenInCaseOfSamePassawordAndValue()
+{
+	const string yes = "YES";
+	const string no = "NO ";
+	Guid pwd1 = Guid.NewGuid(), pwd2 = Guid.NewGuid();
+	string[] values = {yes, yes, no, no, yes};
+
+	Aes256Chiper chiper = new Aes256Chiper();
+
+	string[] encriptedValues = values.Select(v => chiper.EncriptBase64(pwd1, pwd2, v)).ToArray();
+	string[] decriptedValues = encriptedValues.Select(v => chiper.DecriptBase64(pwd1, pwd2, v)).ToArray();
+
+	Assert.IsEmpty(encriptedValues.Intersect(values));
+	Assert.IsTrue(decriptedValues.SequenceEqual(values));
+	Assert.That(encriptedValues[0], Is.Not.EqualTo(encriptedValues[1]));
+	Assert.That(encriptedValues[0], Is.Not.EqualTo(encriptedValues[2]));
+	Assert.That(encriptedValues[0], Is.Not.EqualTo(encriptedValues[4]));
+	Assert.That(encriptedValues[2], Is.Not.EqualTo(encriptedValues[3]));
+
+#if DEBUG
+	for (int i = 0; i < values.Length; i++)
+		Console.WriteLine($"{values[i]} => {encriptedValues[i]}");
+#endif
+}
+```
+
+## Test - Output
+
+```
+YES => EAAAAHCen3c2TZ+RnqdxBuKQFKokYIZjPefxYSwFWRTSq2IO
+YES => EAAAAJ8pQjPbLOCJ1NF0f6GkGJmrINUfuf4Sm9pAoT/bmt+p
+NO  => EAAAAPNiXuzR1wN2bm/xhtbussOr2qCgnxOJlOTOOajsUn63
+NO  => EAAAAJk8QXfltrU1UCzd5XXhscd038YUcaT80ZQarg0qriLC
+YES => EAAAAD3OkyyDm70ECORDNBecAh3EKCNFgJZPaiXjU4F2BaC/
+```
+
+> Download code from my [FxCommon Open Source Project](https://github.com/waldrix/FxCommon)
