@@ -184,4 +184,4 @@ NO  => EAAAAJk8QXfltrU1UCzd5XXhscd038YUcaT80ZQarg0qriLC
 YES => EAAAAD3OkyyDm70ECORDNBecAh3EKCNFgJZPaiXjU4F2BaC/
 ```
 
-> Download code from my [FxCommon Open Source Project](https://github.com/waldrix/FxCommon)
+> You can view my code and tests in my [FxCommon Open Source Project](https://github.com/waldrix/FxCommon)
