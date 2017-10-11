@@ -7,7 +7,7 @@ categories: tip security code-snippet net c#
 
 # Introduction
 
-Increasing security and privacy requirements are important to preserve __confidential informations__. For a developer can be normal to store and somewhat query those type of information from Database. A simple solution is to decrypt/encrypt sensible data, not choosing only a strong encryption algorithm and password, but also generate and use a different pseudo-casual IV (_Initialization Vector_) before encrypting. The side effect of this choice is an increased CPU work and more encrypted data occupation but this choice is best for store confidential data, specifically when information to encrypt assume only a few types of values (_the correlation result much difficult to understand and become an intractable problem_).
+As increasing security and privacy requirements, is important to preserve __confidential informations__. For a developer can be normal to store and somewhat query those type of information from Database. A simple solution is to decrypt/encrypt sensible data, not choosing only a strong encryption algorithm and password, but also generate and use a different pseudo-casual IV (_Initialization Vector_) before each encrypting. The side effect of this choice is an increased CPU work and more encrypted data occupation, but this choice is best for store confidential data, specifically when information to encrypt assume only a few types of values (_find correlation will result much difficult and probably will become an intractable problem_).
 
 # Pratically
 
