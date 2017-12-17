@@ -16,6 +16,14 @@ As increasing security and privacy requirements, is important to preserve __conf
 ### Class - Aes256Chiper
 
 ```csharp
+namespace FxCommonStandard.Services
+{
+	/// <summary>
+	/// Chiper service helper on AES256 .NET chiper.
+	/// </summary>
+	/// <remarks>
+	/// This class generate a random IV every encripting and serialize it in encrypted result strongly enforce encripted data and it's privacy.
+	/// </remarks>
 	/// <see ref="https://msdn.microsoft.com/en-US/library/system.security.cryptography.aescryptoserviceprovider(v=vs.90).aspx"/>
 	/// <see ref="http://stackoverflow.com/questions/8041451/good-aes-initialization-vector-practice"/>
 	public class Aes256Chiper
@@ -130,35 +138,6 @@ As increasing security and privacy requirements, is important to preserve __conf
 			return plaintext;
 		}
 	}
-```
-
-### Test - Aes256Chiper
-
-```csharp
-[Test]
-public void EveryCryptographicResultsIsDifferentEvenInCaseOfSamePassawordAndValue()
-{
-	const string yes = "YES";
-	const string no = "NO ";
-	Guid pwd1 = Guid.NewGuid(), pwd2 = Guid.NewGuid();
-	string[] values = {yes, yes, no, no, yes};
-
-	Aes256Chiper chiper = new Aes256Chiper();
-
-	string[] encriptedValues = values.Select(v => chiper.EncriptBase64(pwd1, pwd2, v)).ToArray();
-	string[] decriptedValues = encriptedValues.Select(v => chiper.DecriptBase64(pwd1, pwd2, v)).ToArray();
-
-	Assert.IsEmpty(encriptedValues.Intersect(values));
-	Assert.IsTrue(decriptedValues.SequenceEqual(values));
-	Assert.That(encriptedValues[0], Is.Not.EqualTo(encriptedValues[1]));
-	Assert.That(encriptedValues[0], Is.Not.EqualTo(encriptedValues[2]));
-	Assert.That(encriptedValues[0], Is.Not.EqualTo(encriptedValues[4]));
-	Assert.That(encriptedValues[2], Is.Not.EqualTo(encriptedValues[3]));
-
-#if DEBUG
-	for (int i = 0; i < values.Length; i++)
-		Console.WriteLine($"{values[i]} => {encriptedValues[i]}");
-#endif
 }
 ```
 
