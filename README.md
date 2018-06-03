@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/MarcoBadessari/blog.svg?branch=master)](https://travis-ci.org/MarcoBadessari/blog)
+[![Build Status](https://travis-ci.org/MBaldessari77/blog.svg?branch=master)](https://travis-ci.org/MBaldessari77/blog)
 
 # Marco Baldessari's blog
 
