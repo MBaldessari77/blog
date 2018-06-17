@@ -1,5 +1,5 @@
 ---
-title: "CII unit test error debug using Docker & Visual Studio code"
+title: "CII unit test error debug using Docker & Visual Studio code (eg. System.Path)"
 layout: post
 date: 2018-06-17
 categories: tip cross-platform code-snippet net.core c# docker
@@ -16,7 +16,7 @@ Some time ago I had a problem with a new service, for suggesting File System pat
 I had some test wrong on Travis CI but not in my VS.2017 using ReSharper unit test runner... but why?
 So I choose to use an Ubuntu Docker image for install Visual Studio Code and debug test, it was easier to do than to explain.
 
-So I discovered that I had to use a constant constant in the tests and that the error was not in the service (then ulteriorly refactored).
+So I discovered that I had to use a constant in the tests and that the error was not in the service (then ulteriorly refactored).
 
 ```csharp
 Path.DirectorySeparatorChar
