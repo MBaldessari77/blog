@@ -14,7 +14,7 @@ Keep in mind that Travis CI by default uses an image of Ubuntu Linux distributio
 
 Some time ago I had a problem with a new service, for suggesting File System path, created on my [FxCommonStandard Library](https://github.com/MBaldessari77/FxCommonStandard).
 I had some test wrong on Travis CI but not in my VS.2017 using ReSharper unit test runner... but why?
-So I choose to use an Ubuntu Docker image for install Visual Studio Code and debug test, it was easier to do than to explain.
+So I choose to use an Ubuntu Docker image for install Visual Studio Code and debug & test, it was easier to do than to explain.
 
 So I discovered that I had to use a constant in the tests and that the error was not in the service (then ulteriorly refactored).
 
