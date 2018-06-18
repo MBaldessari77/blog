@@ -26,3 +26,4 @@ Path.DirectorySeparatorChar
 
 Creating a multiplatform software is a great idea, but do not think that the simple transition to .NET Core will not be painless.
 Correct unit test e/o integration e/o smoke e/o human UAT it will be better to plan it as contingency before thinking to a migration.
+Also, Docker seems to be a very powerful & lightweight alternative to system virtualization.
