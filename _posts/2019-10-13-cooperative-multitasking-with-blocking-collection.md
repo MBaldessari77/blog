@@ -1,5 +1,5 @@
 ---
-title: "Cooperative Multitasking: example using System.Collections.Concurrent.BlockingCollection"
+title: "Cooperative Multitasking: example using BlockingCollection"
 layout: post
 date: 2019-10-13
 categories: tip multitasking code-snippet net.core c#
@@ -97,6 +97,9 @@ Count prime from 2..N where N = 1.000.000 using a Cooperative Engine.
 Cooperative engine
 
 ```csharp
+using System.Collections.Concurrent;
+...
+
     public class CooperativeEngine
     {
         private readonly BlockingCollection<Action> _actions = new BlockingCollection<Action>();
