@@ -125,7 +125,7 @@ To add a manager to this swarm, run 'docker swarm join-token manager' and follow
 1. On each worker run the join command
 
 ```bash
-$ docker swarm join --token SWMTKN-1-1d7zv59cgsu0sw0os03m9hgkcnd1yalmg7wvzsdk2wbpgdfj12-5r8kq67jk8pllfngh8thfktwx xxx.xxx.xxx.xxx:2377
+$ sudo docker swarm join --token SWMTKN-1-1d7zv59cgsu0sw0os03m9hgkcnd1yalmg7wvzsdk2wbpgdfj12-5r8kq67jk8pllfngh8thfktwx xxx.xxx.xxx.xxx:2377
 This node joined a swarm as a worker.
 ```
 
