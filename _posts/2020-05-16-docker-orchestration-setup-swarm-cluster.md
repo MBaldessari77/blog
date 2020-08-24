@@ -35,11 +35,11 @@ For access to an instance select the instance choose to Connect and copy the com
 ssh -i "key-pair-xxx.pem" ubuntu@xxx.xxx.xxx.xxx
 ```
 
-#### [Docker Engine 1.12 or newer](https://docs.docker.com/engine/swarm/swarm-tutorial/#docker-engine-112-or-newer)
+### [Docker Engine 1.12 or newer](https://docs.docker.com/engine/swarm/swarm-tutorial/#docker-engine-112-or-newer)
 
 For __each__ instance follow [INSTALL DOCKER ENGINE ON LINUX MACHINES](https://docs.docker.com/engine/swarm/swarm-tutorial/#install-docker-engine-on-linux-machines) then go to [Install Docker Engine](https://docs.docker.com/engine/install/) and follow the instruction in [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/).
 
-*. [Install using the repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+### [Install using the repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 
 ##### SET UP THE REPOSITORY
 
